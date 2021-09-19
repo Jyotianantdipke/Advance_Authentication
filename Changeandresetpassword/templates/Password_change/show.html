@@ -1,0 +1,16 @@
+{% extends 'Password_change/base.html' %}
+{% block content %}
+
+
+<h3 style="text-align:center"> Log in successfull </h3>
+<a href="{% url 'logout' %}">
+<button class="btn btn-success">Logout</button>
+</a>
+<br><br>
+<a href="{% url 'changepassword' %}">
+<button class="btn btn-success">Change Password</button>
+</a>
+<br><br>
+
+
+{% endblock %}

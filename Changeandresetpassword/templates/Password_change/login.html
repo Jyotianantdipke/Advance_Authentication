@@ -1,0 +1,22 @@
+{% extends 'Password_change/base.html' %}
+
+
+{% block content %}
+<div class="container">
+
+    <form method="post">
+         {% csrf_token %}
+        <label for="un">Enter Username</label>
+        <input type="text" name="un" id="un"><br><br>
+        <label for="pw">Enter Password</label>
+        <input type="password" name="pw" id="pw"><br><br>
+        {% if messages %}
+            {% for i in messages %}
+                {{i}}
+            {% endfor %}
+        {% endif %}
+        <input type="submit" value="Login">
+        <a href="{% url 'password_reset' %}">forget password</a>
+    </form>
+    </div>
+{% endblock %}

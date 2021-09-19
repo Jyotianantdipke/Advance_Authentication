@@ -1,0 +1,18 @@
+
+{% extends 'Password_change/base.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="form-group"></div>
+    <h3 style="text-align:center;">Register</h3>
+    <form method="post" class="jumbotron">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+</div>
+</div>
+
+
+{% endblock %}
